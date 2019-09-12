@@ -16,37 +16,8 @@ public static void main(String[] args) throws AWTException {
 	WebDriver driver=new ChromeDriver();
 	driver.get("https://www.snapdeal.com");
 	WebElement search = driver.findElement(By.xpath("(//input[@name='keyword'])[1]"));
-search.sendKeys("iphone 7");
+search.sendKeys("samsung J7 max");
 Robot r=new Robot();
 r.keyPress(KeyEvent.VK_ENTER);
-r.keyRelease(KeyEvent.VK_ENTER);
-WebElement iPhone = driver.findElement(By.xpath("(//p[@class='product-title '])[1]"));
-iPhone.click();
-String pWid = driver.getWindowHandle();
-System.out.println(pWid);
-Set<String> allWid = driver.getWindowHandles();
-System.out.println(allWid);
-for (String eachWid : allWid) {
-	if (!pWid.equals(eachWid)) {
-		driver.switchTo().window(eachWid);
-	}
-}
-
-WebElement cart = driver.findElement(By.xpath("//div[@class='mmm col-xs-6 btn btn-xl btn-theme-secondary rippleWhite buyLink']"));
-
-cart.click();
-
-WebElement print = driver.findElement(By.xpath("//div[@class='you-pay']"));
-
-String text = print.getText();
-System.out.println(text);
-
-driver.switchTo().window(pWid);
-driver.close();
-
-
-
-
-
-}
+r.keyRelease(KeyEvent.VK_ENTER);}
 }

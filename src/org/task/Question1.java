@@ -34,15 +34,6 @@ WebElement iPhone = driver.findElement(By.xpath("//span[@class='a-size-medium a-
 	}
 	
 	
-	WebElement btn = driver.findElement(By.xpath("//input[@id='add-to-cart-button']"));
-	btn.click();
-	
-	WebElement print = driver.findElement(By.xpath("//div[@id='huc-v2-order-row-with-divider']"));
-	String text = print.getText();
-	System.out.println(text);
-	
-	
-	
 	
 	}
 

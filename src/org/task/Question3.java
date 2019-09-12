@@ -35,6 +35,8 @@ public class Question3 {
 	String text = gng.getText();
 	System.out.println(text);
 	
+	driver.quit();
+	
 	
 	
 	
